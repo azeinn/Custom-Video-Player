@@ -49,16 +49,16 @@ public class VideoPlayerViewController: UIViewController {
     }
     
     override public func viewWillDisappear(_: Bool) {
-        resetOrientation(UIInterfaceOrientationMask.portrait)
-        UIViewController.attemptRotationToDeviceOrientation()
+//        resetOrientation(UIInterfaceOrientationMask.portrait)
+//        UIViewController.attemptRotationToDeviceOrientation()
         navigationController?.setNavigationBarHidden(false, animated: false)
         tabBarController?.tabBar.isHidden = false
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        resetOrientation(UIInterfaceOrientationMask.landscapeRight)
-        UIViewController.attemptRotationToDeviceOrientation()
+//        resetOrientation(UIInterfaceOrientationMask.landscapeRight)
+//        UIViewController.attemptRotationToDeviceOrientation()
         NotificationCenter.default.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         addLoader()
         setupPlayer()
@@ -76,9 +76,9 @@ public class VideoPlayerViewController: UIViewController {
         return true
     }
     
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscape
-    }
+//    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .landscape
+//    }
     
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

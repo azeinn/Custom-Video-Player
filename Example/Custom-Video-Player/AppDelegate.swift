@@ -60,12 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return rootViewController
     }
 
-    func application(_: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        if let rootViewController = topViewControllerWithRootViewController(rootViewController: window?.rootViewController), rootViewController.responds(to: Selector("shouldForceLandscape")) {
-            // Unlock landscape view orientations for this view controller
-            return .landscape
-        }
-        return .portrait
-    }
+//    func application(_: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+//        if let rootViewController = topViewControllerWithRootViewController(rootViewController: window?.rootViewController), rootViewController.responds(to: Selector("shouldForceLandscape")) {
+//            // Unlock landscape view orientations for this view controller
+//            return .landscape
+//        }
+//        return .portrait
+//    }
 }
 
